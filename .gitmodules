@@ -1,0 +1,3 @@
+[submodule "work/proposal-gen"]
+	path = work/proposal-gen
+	url = https://github.com/jmpaz/proposal-gen.git
