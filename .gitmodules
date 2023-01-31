@@ -1,3 +1,6 @@
 [submodule "work/proposal-gen"]
 	path = work/proposal-gen
 	url = https://github.com/jmpaz/proposal-gen.git
+[submodule "code/script-writer"]
+	path = code/script-writer
+	url = https://github.com/jmpaz/script-writer
