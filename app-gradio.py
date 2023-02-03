@@ -10,7 +10,7 @@ from threading import Lock
 
 
 def load_chain():
-    llm = OpenAI(model_name="text-davinci-003", temperature=0.8)
+    llm = OpenAI(model_name="text-chat-davinci-002-20221122", temperature=0.8)
 
     prompt = PromptTemplate(
         input_variables=['history', 'input'],
@@ -76,17 +76,22 @@ class ChatWrapper:
         """Execute the chat functionality."""
         self.lock.acquire()
         try:
-            history = history or []
+            history = history or []            
             # If chain is None, that is because no API key was provided.
             if chain is None:
                 history.append((inp, "Please paste your OpenAI key to use"))
                 return history, history
+            
             # Set OpenAI key
             import openai
             openai.api_key = api_key
+            
             # Run chain and append input.
             output = chain.run(input=inp)
-            history.append((inp, output))
+            if "text-chat-davinci" in chain.llm.model_name:
+                history.append((inp, output.strip("<|im_end|>")))
+            else:
+                history.append((inp, output))
         except Exception as e:
             raise e
         finally:
