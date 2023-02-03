@@ -1,5 +1,5 @@
 # PromptLib [WIP]
-### About
+## About
 A collection of prompts for large language models, especially ChatGPT – sending and receiving large amounts of tokens is nice while it's free / [unlimited](https://openai.com/blog/chatgpt-plus/).
 
 <img width="720" alt="image" src="https://user-images.githubusercontent.com/30947643/216523684-7a23fca9-1a3c-4257-bd2a-4f547c80b3fd.png">
@@ -10,10 +10,13 @@ Generally, prompts are structured in what is starting to turn into a standardize
 
 
 ## Prompts
-see available prompts [here](prompts/) – try pasting one into ChatGPT
+- See available prompts [here](prompts/) – try pasting one into ChatGPT.
 
 <!-- todo: prompt table inc. hyperlinked name, tags, format; updates on push via GitHub action -->
 
+
+## Credits
+- Base UI template: https://github.com/hwchase17/langchain-gradio-template
 
 ## License
 `(coming soon)`
