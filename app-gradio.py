@@ -60,8 +60,9 @@ def set_openai_api_key(api_key: str):
     """
     if api_key:
         os.environ["OPENAI_API_KEY"] = api_key
+        print("API key set.")
         chain = load_chain()
-        os.environ["OPENAI_API_KEY"] = ""
+        # os.environ["OPENAI_API_KEY"] = ""
         return chain
 
 class ChatWrapper:
