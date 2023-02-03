@@ -42,7 +42,7 @@ def load_prompt(prompt_selection: str):
 
 def fetch_prompts():
     """Iterates recursively through the prompts directory, returning a list of prompts.
-    
+
     This is used to populate the dropdown menu in the Gradio interface.
     """
     available_prompts = []
@@ -98,7 +98,7 @@ block = gr.Blocks(css=".gradio-container {background-color: lightgray}")
 
 with block:
     with gr.Row():
-        gr.Markdown("<h3><center>LangChain Demo</center></h3>")
+        gr.Markdown("<h3><center>PromptLib</center></h3>")
 
         openai_api_key_textbox = gr.Textbox(
             placeholder="Paste your OpenAI API key (sk-...)",
@@ -120,7 +120,7 @@ with block:
 
     with gr.Row():
         message = gr.Textbox(
-            label="What's your question?",
+            label="Message",
             placeholder="What's the answer to life, the universe, and everything?",
             lines=1,
         )
@@ -136,7 +136,7 @@ with block:
     )
 
     gr.HTML(
-        "<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>"
+        "<center>by Josh Pazmino: <a href='https://github.com/jmpaz'>GitHub</a> • <a href='https://twitter.com/fjpaz_'>Twitter</a> • <a href='https://linkedin.com/in/fjpazmino'>LinkedIn</a></center>"
     )
 
     state = gr.State()
