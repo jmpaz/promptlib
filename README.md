@@ -1,14 +1,3 @@
----
-title: PromptLib
-emoji: 📜
-colorFrom: purple
-colorTo: blue
-sdk: gradio
-sdk_version: 3.10.9
-app_file: app-gradio.py
-pinned: true
----
-
 # PromptLib [WIP]
 ## About
 A collection of prompts for large language models, especially ChatGPT – sending and receiving large amounts of tokens is nice while it's free / [unlimited](https://openai.com/blog/chatgpt-plus/).
