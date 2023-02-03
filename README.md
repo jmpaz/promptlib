@@ -16,7 +16,7 @@ Generally, prompts are structured in what is starting to turn into a standardize
 
 
 ## Credits
-- Base UI template: https://github.com/hwchase17/langchain-gradio-template
+- [Base Gradio template](https://github.com/hwchase17/langchain-gradio-template)
 
 ## License
 `(coming soon)`
