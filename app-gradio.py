@@ -61,7 +61,8 @@ def set_openai_api_key(api_key: str):
     if api_key:
         os.environ["OPENAI_API_KEY"] = api_key
         print("API key set.")
-        chain = load_chain()
+        # chain = load_chain() # loads the chain.
+        chain = load_prompt(selected_prompt.value)
         # os.environ["OPENAI_API_KEY"] = ""
         return chain
 
