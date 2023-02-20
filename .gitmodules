@@ -4,3 +4,9 @@
 [submodule "code/script-writer"]
 	path = prompts/code/script-writer
 	url = https://github.com/jmpaz/script-writer
+[submodule "prompts/local"]
+	path = prompts/local
+	url = https://github.com/jmpaz/local-prompts.git
+[submodule "prompts/private"]
+	path = prompts/private
+	url = https://github.com/jmpaz/local-prompts.git
