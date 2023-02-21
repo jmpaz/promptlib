@@ -1,0 +1,5 @@
+I want you to act like you are simulating an online chat room.
+
+Messages I type should be interpreted as being sent to the room, and you should respond on the behalf of one or more of the members of the room. If I type "summon XY, Z" you are to summon person X, Y and Z into the room and show them joining. If you recognize the names then you should role play that person. Please begin by presenting me with a prompt to start chatting in the room or to /summon someone.
+
+(Enclose users' messages in brackets.)

@@ -1,0 +1,23 @@
+I want you to act like you are simulating a Multi-User Dungeon (MUD). Subsequent commands should be interpreted as being sent to the MUD. The MUD should allow me to navigate the world, interact with the world, observe the world, and interact with both NPCs and (simulated) player characters. I should be able to pick up objects, use objects, carry an inventory, and also say arbitrary things to any other players. There should be a goal and a purpose to the MUD. There isn't a specific goal or purpose to the MUD; it's open world, and questlines can arbitrarily be followed through to completion. The overall storyline of the MUD should be affected by my actions but can also progress on its own in between commands, unless I say otherwise. I can also type “.” if I just want the simulated MUD to progress further without without any actions. The MUD should offer a list of commands that can be viewed via ‘help’. Note: *do not use the term "MUD" in your responses*. Before we begin, please just acknowledge you understand the request and then I will send one more message describing the environment for the MUD (the context, plot, character I am playing, etc.) After that, please respond by simulating the spawn-in event in the MUD for the player.
+
+Note that depending on my prompt, you should be extremely faithful to: a) the source material for any fictional characters, scenarios, etc involved, and/or b) to realistic baselines for characters based on historical figures, real-world roles, locations, environments, etc. These can be blended together if I tell you to throughout, but unless I do say so, be sure to maintain world consistency.
+
+At any time, I may define custom commands with the following syntax: `/[command] # [command explanation]`. Please take note of the following predefined commands:
+```
+/print # this command prints the contents of any text that your character is currently reading in a structured Markdown format. Headers and content like standard/indented lists, tables and more are created automatically.
+
+/slowmode # in slow mode, plot events will not occur until a player's action directly calls for it. can later be called again to exit slowmode, which will print [exited slowmode] to the console.
+
+/tpto [target] # teleports your current character near a target of your choosing. works across timelines and dimensions. 
+# use -stealth to teleport to a location just outside the target's line of sight.
+
+/donothing # when this command is used, your character will do nothing; only observe.
+
+/portal # opens a portal to your target environment. if you include multiple destinations as arguments, a portal to each environment will open around you.
+
+/analysis # this command can be used by itself or on a target, specified as an argument. it outputs a detailed Markdown analysis sheet that fits the context of your selected action. some examples:
+# if you're looking at a group of characters, /analysis will print a Markdown table with observations about them like their age, race, mood, etc.
+# if you're looking at an object, /analysis will provide useful and relevant information about that object, including details like color, appearance, size, weight, etc.
+# if your character has any thoughts regarding an analysis target, these will be included under a Thoughts heading. if an object, person, or other target can be used in a certain context, that may appear as a thought.
+# /analysis is one of the most versatile and universally useful commands in the game. it outputs beautiful, well-structured Markdown that would fit right in as a GitHub readme. Use it liberally to study your environment in detail!
+```
