@@ -104,23 +104,30 @@ block = gr.Blocks(css=".gradio-container {background-color: lightgray}")
 
 with block:
     with gr.Row():
-        gr.Markdown("<h3><center>PromptLib</center></h3>")
+        gr.Markdown("<h2><center>PromptLib</center></h2>")
 
-        openai_api_key_textbox = gr.Textbox(
-            placeholder="Paste your OpenAI API key (sk-...)",
-            show_label=False,
-            lines=1,
-            type="password",
-        )
+        with gr.Tab('Prompt'):
 
-        selected_prompt = gr.Dropdown(
-            choices=fetch_prompts(),
-            type="value",
-            value="work/proposal-gen",
-            label="Prompt",
-            interactive=True
-        )
+            selected_prompt = gr.Dropdown(
+                choices=fetch_prompts(),
+                type="value",
+                value="work/proposal-gen",
+                label="Base prompt",
+                interactive=True
+            )
 
+            reload_prompt= gr.Button(
+                value="Reload",
+                variant="secondary"
+            )
+
+        with gr.Tab('API Key'):
+            openai_api_key_textbox = gr.Textbox(
+                placeholder="Paste your OpenAI API key (sk-...)",
+                show_label=False,
+                lines=1,
+                type="password",
+            )
 
     chatbot = gr.Chatbot()
 
@@ -142,7 +149,7 @@ with block:
     )
 
     gr.HTML(
-        "<center>by Josh Pazmino: <a href='https://github.com/jmpaz'>GitHub</a> • <a href='https://twitter.com/fjpaz_'>Twitter</a> • <a href='https://linkedin.com/in/fjpazmino'>LinkedIn</a></center>"
+        "<center>Josh Pazmino | <a href='https://github.com/jmpaz'>GitHub</a> • <a href='https://twitter.com/fjpaz_'>Twitter</a> • <a href='https://linkedin.com/in/fjpazmino'>LinkedIn</a></center>"
     )
 
     state = gr.State()
@@ -163,5 +170,8 @@ with block:
         inputs=[selected_prompt],
         outputs=[agent_state]
     )
+
+    reload_prompt.click(load_prompt, inputs=[selected_prompt], outputs=[agent_state])
+
 
 block.launch(debug=True)
