@@ -6,8 +6,7 @@ Many are projects in and of themselves — natural language programs for which 
 
 | <img width="720" alt="image" src="https://user-images.githubusercontent.com/30947643/216523684-7a23fca9-1a3c-4257-bd2a-4f547c80b3fd.png"> | 
 |:--:| 
-| *The Gradio frontend currently supports GPT-3 (via [LangChain](https://github.com/hwchase17/langchain))~~, specifically [`text-chat-davinci`](https://github.com/waylaidwanderer/node-chatgpt-api/commit/b3e6f9b1ac2d46027731430b04825e42fe398717) while it's available.~~* |
-
+| *Gradio frontend* |
 
 
 ## Context
@@ -19,7 +18,7 @@ We're only just beginning to tap into the potential of even the currently availa
 
 Effectively, most of the prompts in this library are natural-language programs (both in their literal/written structure and in the scale & exponential value of their outputs when operated effectively) which act upon concepts and data, represented as text.
 
-I'm currently working on the prompts themselves in my spare time, along with eventual documentation for each prompt, along with the library as a whole. The project serves as a base for tools & utilities to be built out over time for developers, knowledge workers and the general public.
+I'm currently working on the prompts themselves in my spare time, along with the frontend and eventual documentation for each prompt. The project serves as a base for tools & utilities to be built out over time for developers, knowledge workers and the general public.
 
 
 ## Prompts
