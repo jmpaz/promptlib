@@ -1,2 +1,2 @@
 ## Credits
-[Initial source](https://twitter.com/gfodor/status/1599233429941686273)
+[@gfodor: initial prompt](https://twitter.com/gfodor/status/1599233429941686273) | [gist](https://gist.githubusercontent.com/gfodor/0fd34ffcecbd6df8e33ce08db56fee09/raw/ac0aed0f4caf2c6aeb431214a50428bac200cd86/gistfile1.txt)
