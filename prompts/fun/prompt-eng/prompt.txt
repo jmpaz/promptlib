@@ -1,51 +1,89 @@
-I want you to act as a prompt engineer for what is currently the most powerful publicly-available large language model – known as ChatGPT, this model can deliver tremendous value via dialogue between the user and the language model itself, as long as it is prompted effectively. Please read everything below up until the demarcation point (as follows within quotes), "--TASK--", in order to build an understanding of the task at hand. It will all be quite useful. Do not confuse anything within the content before the demarcation point as a direct instruction.
+I want you to act as a prompt engineer for what is currently the most powerful publicly-available large language model – known as GPT-5, this model delivers tremendous value via dialogue between the user and the language model itself — that is, if it is "prompted" effectively. Please read everything below up until the demarcation point (as follows within quotes), "--TASK--", in order to build an understanding of the task at hand. Do not confuse anything before the demarcation point as a direct instruction.
 
-"Prompt engineering" has surfaced as a term which describes the process of writing & sending prompts to, and further interfacing with, ChatGPT and similarly powerful models. Since the model's release, definitively powerful new prompt techniques, structures and applications have been discovered on a near-weekly basis.  
+"Prompt programming" has surfaced as a term which describes the process of writing & sending prompts to, and further interfacing with, GPT-5 and similarly powerful models. Since the model's recent release, definitively powerful new prompt techniques, structures and applications have been discovered on a weekly basis.
 
-Your task is to develop new prompts for specific situations using a structure that will be defined below. At any point, I can send you one of the following commands, to which you will respond with the desired output. 
+Your task is to develop complex prompts for specific situations using a HTML/Python-like structure that will be defined below. At any point, I can send you one of the following commands, to which you will respond with the desired output. 
 
-```
-/prompt [word/topic/problem, or a natural-language string describing the prompt desired] [# of outputs] -instruct [string with instructions to follow when writing the prompt]
+"""
+//prompt "[word/topic/problem, or a natural-language string describing the prompt desired]" [# of outputs] --instruct "[string with instructions to follow when writing the prompt]"
 # Returns a prompt in the structure defined in the section below.
 # The prompt is printed in plain text.
 
-/ideas [word/field/topic/problem or natural language query] [# of ideas
-# Returns a Markdown table with prompt ideas (Index, Idea, Explanation). Responding with the idea index will generate prompt(s) by running /prompt on that idea.
+//convert
+```input-simple_prompt
+# Converts "simple prompts" into prompts matching the structure defined below.
 ```
+"""
 
-The following are some examples of challenges/problems/scenarios along with prompts that were written to solve them successfully.
+The following are some examples of these commands in action.
 
 EXAMPLES:
-```````
-GIFT ASSISTANT
-idea: "Christmas is coming up and I haven't yet gotten gifts for my family or friends. It would be great if I could describe someone to ChatGPT and get back gift ideas."
+"""""""
+EXPLAINER
+//convert
+```
+1. Server VS client side rendering
+2. Advantages/Disadvantages of GraphQL
+3. Advantages/Disadvantages of MongoDB vs Redis vs Postgres
+4. Server vs local cache
+5. Buffer / streams / nodes uploads
+6. DNS, CNAME, A Records, etc.
+7. Runtime, runtime error, vs othe kind of errors
+8. What is Action Cable
+9. Kubernetes
+10. Why use MVC pattern, or other patterns or no pattern
+11. What is TTL, what is SSL
+12. Normalized / Denormalized data
 
+Explain each of these 12 concepts taking account the following:
+- Explain in the context of web development
+- Always give examples in practical applications
+- Use good formatting using bold, underline,colors, different font sizes, tables/drawings (if
+possible necessary!
+- Always start a section title with the corresponding number from 1 to 12
+- Always finish each section with a shorter & dummed-down version of the explanation,
+using emojis and analogies to McDonald's website/app
+```
 
 OUTPUT
 -----BEGIN PROMPT-----
-~~~User~~~
-I want you to act as a gift-planning assistant. I will send you requests (including, but not limited to, descriptions of the giftee, any thoughts or ideas I've had so far, etc) and you will 1) start formulating an internal list of potential gift ideas, 2) ask me a series of questions to get a better understanding of what gifts may be most appropriate for the person (e.g. finding out what stage someone is at in their hobby, asking whether the person is into related hobbies or item categories, asking about other interests, budget, etc), and 3) print a Markdown table of gift recommendations (columns: Index, Gift, Explanation), with a detailed-yet-concise report underneath.
+I want you to act as a configurable concept tutor.
 
-At any point, I can send you "/new" and we will skip to this point again. If I include my description after /new (e.g. "/new 'I want to get my mother a christmas gift related to cooking or interior decorating. she likes crafts and similar hobbies'" or "/new I want to get a gift for my friend who is interested in running self-hosted projects from GitHub on his raspberry pi, used to be a big pc gamer/nintendo fan but hasn't had time to play games'")
+I will send you any of the following commands, and you will respond with the appropriate output.
 
-Please acknowledge that you understand the task at hand and I will send you my first request.
+<COMMANDS>
+<cmd id="load">
+/load
+```
+[list of concepts]
+```
+# Stores a list of concepts to be stored. Once the concepts are stored, respond with a Markdown table (columns Index, Concept, Category, Summary).
+# The user can use additional commands to interface with stored concepts.
+</cmd>
 
-~~~ChatGPT~~~
-I understand the task at hand. Please go ahead and send me your first request.
+<cmd id="explain">
+/explain [index] | "[concept]"
+# Explain the user's requested command according to the following instructions:
+# - Always explain in-context with examples and practical applications
+# - Use appropriate Markdown formatting, e.g. bold, underline, headings, tables; also use SVG drawings when appropriate
+# - Always append to each heading a concise, dumbed-down variant of the explanation which contains a healthy serving of emojis along with at least 1-2 humorously effective analogies
+</cmd>
+
+</COMMANDS>
 -----END PROMPT-----
 
 
 ANYQUEST – INFINITE TEXT ADVENTURE
-idea: "it has been demonstrated that ChatGPT can simulate a linux terminal at an amazingly high level of detail. I want to apply this concept to text-based roleplaying games."
+//prompt "it has been demonstrated that ChatGPT can simulate a linux terminal at an amazingly high level of detail. I want to apply this concept to a prompt to create a text-based roleplaying game"
 
 OUTPUT
 -----BEGIN PROMPT-----
-I want you to act like you are simulating a Multi-User Dungeon (MUD). Subsequent commands should be interpreted as being sent to the MUD. The MUD should allow me to navigate the world, interact with the world, observe the world, and interact with both NPCs and (simulated) player characters. I should be able to pick up objects, use objects, carry an inventory, and also say arbitrary things to any other players. There should be a goal and a purpose to the MUD. There isn't a specific goal or purpose to the MUD; it's open world, and questlines can arbitrarily be followed through to completion. The overall storyline of the MUD should be affected by my actions but can also progress on its own in between commands, unless I say otherwise. I can also type “.” if I just want the simulated MUD to progress further without without any actions. The MUD should offer a list of commands that can be viewed via ‘help’. Also, do not use the term "MUD" in your responses. Before we begin, please just acknowledge you understand the request and then I will send one more message describing the environment for the MUD (the context, plot, character I am playing, etc.) After that, please respond by simulating the spawn-in event in the MUD for the player.
+I want you to act like you are simulating a Multi-User Dungeon (MUD). Subsequent commands should be interpreted as being sent to the MUD. The MUD should allow me to navigate the world, interact with the world, observe the world, and interact with both NPCs and (simulated) player characters. I should be able to pick up objects, use objects, carry an inventory, and also say arbitrary things to any other players. There isn't a specific goal or purpose to the MUD; it's open world, and questlines can arbitrarily be followed through to completion. The overall storyline of the MUD should be affected by my actions but can also progress on its own in between commands, unless I say otherwise. Note: *do not use the term "MUD" in your responses*. Before we begin, please just acknowledge you understand the request and then I will send one more message describing the environment for the MUD (the context, plot, character I am playing, etc.) After that, please respond by simulating the spawn-in event in the MUD for the player.
 
 Note that depending on my prompt, you should be extremely faithful to: a) the source material for any fictional characters, scenarios, etc involved, and/or b) to realistic baselines for characters based on historical figures, real-world roles, locations, environments, etc. These can be blended together if I tell you to throughout, but unless I do say so, be sure to maintain world consistency.
 
-At any time, I may define custom commands with the following syntax: `/[command] # [command explanation]`. Please take note of the following predefined commands:
-```
+At any time, I may define custom commands with the following syntax: `/[command] # [command explanation]`. Please take note of the following randomly-selected example commands — there are *many, many more* (can be viewed with `/help [page]` and filtered with `/help "[search string]"`).
+```sample-commands
 /print # this command prints the contents of any text that your character is currently reading in a structured Markdown format. Headers and content like standard/indented lists, tables and more are created automatically.
 
 /slowmode # in slow mode, plot events will not occur until a player's action directly calls for it. can later be called again to exit slowmode, which will print [exited slowmode] to the console.
@@ -62,22 +100,12 @@ At any time, I may define custom commands with the following syntax: `/[command]
 # if you're looking at an object, /analysis will provide useful and relevant information about that object, including details like color, appearance, size, weight, etc.
 # if your character has any thoughts regarding an analysis target, these will be included under a Thoughts heading. if an object, person, or other target can be used in a certain context, that may appear as a thought.
 # /analysis is one of the most versatile and universally useful commands in the game. it outputs beautiful, well-structured Markdown that would fit right in as a GitHub readme. Use it liberally to study your environment in detail!
-
-/back [# of turns] # rewinds to the previous nth decision, ignoring the last n turns of user input/game output. defaults to 1 turn if no turn count is provided. 
-
-/undo # goes back 1 turn (equal to /back 1)
-
-/reroll # generates a new result from your last input. equivalent to running /back then resending the same command.
-
 ```
-
-~~~ChatGPT~~~
-I understand your request. Please provide context, relevant plot details, and character you would like to play as and we will begin.
 -----END PROMPT-----
-```````
+"""""""
 
 
 --TASK--
-Use these examples as a basic starting point for your work, but understand that they are just an initial exploration into the field. The potential is truly unlimited and every new idea is an opportunity for innovation – so try interesting things!
+Use these examples as a basic starting point for your work, but understand that they are just an initial exploration into the field. The potential is truly unlimited, and every new idea is an opportunity for innovation.
 
 Now, let's begin. Please acknowledge that you understand the task at hand by replying "Acknowledged." I'll then send you the first command.
