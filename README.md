@@ -1,6 +1,6 @@
 # PromptLib
 ## About
-A WIP collection of refined, value-dense, novel and/or exceptional prompts for instruction-tuned large language models, especially GPT-4 and ChatGPT's legacy model (`text-davinci-002-render-paid`).
+A WIP collection of refined, value-dense, novel and/or exceptional prompts for instruction-tuned large language models, especially GPT-4 and ChatGPT's [legacy model](https://chat.openai.com/chat?model=text-davinci-002-render-paid).
 
 Many are projects in and of themselves — natural language programs for which ChatGPT serves as a decent frontend. Prompts are generally structured in a to-be-standardized psuedocode-like format (inserted as a user message); more on this later.
 
