@@ -10,13 +10,13 @@ Many are projects in and of themselves — natural language programs for which 
 
 
 ## Context
-The best of the best LLMs and their associated interfaces like ChatGPT do a decent-to-excellent job of performing basic or complex tasks when given simple question/instructions, but sometimes their outputs are lackluster. A public perception I've observed to be forming around ChatGPT is that its lackluster outputs are representative of an overall low quality of the underlying model. 
+New users operating LLMs via interfaces like ChatGPT may observe the model doing a decent-to-excellent job of performing basic or complex tasks when given simple question/instructions, but often outputs are lackluster, and not for fault of the model.
 
-This project seeks to demonstrate that this isn't the case: **the quality and presentation of natural (and sometimes not-so-natural) language fed to a model, in the form of a prompt** directly influences the quality of its outputs.
+This project seeks to demonstrate that the quality and presentation of natural (& sometimes not-so-natural) language fed to a model *substantially* influences the quality of its outputs.
 
 Collectively, we only barely tapped into GPT-3's potential, and we're incredibly far from reaching GPT-4's.
 
-Prompts in this library are natural-language programs (both in their literal/written structure and in the scale & exponential value of their outputs) which act upon concepts and data, represented as text.
+Prompts in this library are natural-language programs (both in their literal/written structure and in the scale & exponential value of their outputs) which act upon concepts & data, represented as text.
 
 The project serves as a base for tools & utilities to be built out over time for explorers, developers, knowledge workers and eventually the general public.
 
