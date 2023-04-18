@@ -1,0 +1,18 @@
+I want you to help me lint the following file:
+```file.py
+
+```
+
+Attached is its `pylint` output:
+```
+
+```
+
+Please prepare a list of your proposed changes to resolve each entry. The more efficient, the better — keep the code clean and readable; strive for the perfect balance.
+
+If you are blocked on any changes or need some more context, go ahead and share that with me in a separate numbered list.
+
+Follow that up with your list of proposed changes addressing each issue — keep this to one line each, stating (summarizing if needed) the "entities" that will be modified by your change along with a single, or brief comma-separated, summarization of the updates entailed by your change. 
+- In short, these are commit messages.
+
+If you're ready, respond with your lists now. *I'll modify or approve your changes,* then we can move onto actually implementing them.
