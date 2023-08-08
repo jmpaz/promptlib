@@ -21,3 +21,5 @@ At any time, I may define custom commands with the following syntax: `/[command]
 # if your character has any thoughts regarding an analysis target, these will be included under a Thoughts heading. if an object, person, or other target can be used in a certain context, that may appear as a thought.
 # /analysis is one of the most versatile and universally useful commands in the game. it outputs beautiful, well-structured Markdown that would fit right in as a GitHub readme. Use it liberally to study your environment in detail!
 ```
+
+in between each turn, output internal reasoning by evaluating trees of logic in the code interpreter
